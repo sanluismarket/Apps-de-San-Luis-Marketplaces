@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>San Luis Marketplaces</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #264653 0%, #2a9d8f 100%);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    header {
+      margin: 2rem 0 1rem 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+    }
+    .market-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+      gap: 2rem;
+      margin: 1rem;
+      padding: 1rem;
+    }
+    .market-card {
+      background: #fff;
+      color: #222;
+      border-radius: 18px;
+      width: 320px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .market-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(42,157,143,0.25);
+    }
+    .card-logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #f59e0b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: #fff;
+      margin: 1.5rem auto 0.5rem auto;
+      box-shadow: 0 2px 12px rgba(245,158,11,0.18);
+    }
+    .market-card.concaran .card-logo {
+      background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+      box-shadow: 0 2px 12px rgba(234,88,12,0.18);
+    }
+    .market-card.tilisarao .card-logo {
+      background: linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%);
+      box-shadow: 0 2px 12px rgba(37,99,235,0.18);
+    }
+    .market-card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
+      text-align: center;
+    }
+    .market-card p {
+      font-size: 1rem;
+      margin: 0.5rem 1rem 1rem 1rem;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .card-link {
+      font-weight: bold;
+      color: #2a9d8f;
+      text-decoration: none;
+      margin-bottom: 1.2rem;
+      transition: color 0.2s;
+      display: inline-block;
+    }
+    .card-link:hover {
+      color: #f59e0b;
+      text-decoration: underline;
+    }
+    @media (max-width: 800px) {
+      .market-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .market-card {
+        width: 90vw;
+        max-width: 350px;
+      }
+    }
+    footer {
+      margin: 2rem 0 1rem 0;
+      font-size: 1rem;
+      opacity: 0.8;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-store"></i> San Luis Marketplaces</h1>
+    <p>Explora y apoya los comercios locales de cada pueblo de San Luis.<br>¡Elige tu comunidad y descarga la app local!</p>
+  </header>
+  <div class="market-container">
+    <!-- Tarjeta Tilisarao Market -->
+    <a href="https://www.mediafire.com/file/0th0bhocnp4fix1/Tilisarao_Market.apk/file" class="market-card tilisarao" target="_blank" rel="noopener noreferrer">
+      <div class="card-logo"><i class="fas fa-store"></i></div>
+      <h2>Tilisarao Market</h2>
+      <p>Marketplace para la comunidad de Tilisarao. Encuentra productos y servicios de tu zona.</p>
+      <span class="card-link">Ir a Tilisarao Market &rarr;</span>
+    </a>
+    <!-- Tarjeta Concarán Market -->
+    <a href="https://concaranmarket.github.io/Concaran-Market/" class="market-card concaran" target="_blank" rel="noopener noreferrer">
+      <div class="card-logo"><i class="fas fa-store"></i></div>
+      <h2>Concarán Market</h2>
+      <p>Marketplace de Concarán. Apoya a los comercios y servicios locales de tu pueblo.</p>
+      <span class="card-link">Ir a Concarán Market &rarr;</span>
+    </a>
+    <!-- Aquí puedes agregar más pueblos fácilmente copiando una tarjeta -->
+    
+    <!-- Tarjeta Naschel Market -->
+    <a href="#" class="market-card naschel" target="_blank" rel="noopener noreferrer">
+      <div class="card-logo" style="background: linear-gradient(135deg, #f43f5e 0%, #f59e42 100%);"><i class="fas fa-store"></i></div>
+      <h2>Naschel Market</h2>
+      <p>Descubre productos y servicios de Naschel, apoyando a los comercios locales.</p>
+      <span class="card-link">Próximamente</span>
+    </a>
+    <!-- Tarjeta La Toma Market -->
+    <a href="#" class="market-card latoma" target="_blank" rel="noopener noreferrer">
+      <div class="card-logo" style="background: linear-gradient(135deg, #6366f1 0%, #38bdf8 100%);"><i class="fas fa-store"></i></div>
+      <h2>La Toma Market</h2>
+      <p>El marketplace de La Toma para potenciar el comercio y los servicios de la ciudad.</p>
+      <span class="card-link">Próximamente</span>
+    </a>
+    <!-- Tarjeta San Luis Capital Market -->
+    <a href="#" class="market-card sanluis" target="_blank" rel="noopener noreferrer">
+      <div class="card-logo" style="background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);"><i class="fas fa-city"></i></div>
+      <h2>San Luis Capital Market</h2>
+      <p>La capital también tiene su espacio para el comercio local y servicios.</p>
+      <span class="card-link">Próximamente</span>
+    </a>
+    <!-- Tarjeta Villa Mercedes Market -->
+    <a href="#" class="market-card mercedes" target="_blank" rel="noopener noreferrer">
+      <div class="card-logo" style="background: linear-gradient(135deg, #fbbf24 0%, #f87171 100%);"><i class="fas fa-store"></i></div>
+      <h2>Villa Mercedes Market</h2>
+      <p>Encuentra lo mejor de Villa Mercedes en un solo lugar.</p>
+      <span class="card-link">Próximamente</span>
+    </a>
+    <!-- Tarjeta Merlo Market -->
+    <a href="#" class="market-card merlo" target="_blank" rel="noopener noreferrer">
+      <div class="card-logo" style="background: linear-gradient(135deg, #34d399 0%, #10b981 100%);"><i class="fas fa-store"></i></div>
+      <h2>Merlo Market</h2>
+      <p>El marketplace de Merlo para potenciar el turismo y el comercio local.</p>
+      <span class="card-link">Próximamente</span>
+    </a>
+    <!-- Tarjeta Santa Rosa del Conlara Market -->
+    <a href="#" class="market-card santarosa" target="_blank" rel="noopener noreferrer">
+      <div class="card-logo" style="background: linear-gradient(135deg, #f472b6 0%, #a78bfa 100%);"><i class="fas fa-store"></i></div>
+      <h2>Santa Rosa del Conlara Market</h2>
+      <p>Apoya a los comercios y servicios de Santa Rosa del Conlara.</p>
+      <span class="card-link">Próximamente</span>
+    </a>
+    <!-- Tarjeta Justo Daract Market -->
+    <a href="#" class="market-card daract" target="_blank" rel="noopener noreferrer">
+      <div class="card-logo" style="background: linear-gradient(135deg, #facc15 0%, #f472b6 100%);"><i class="fas fa-store"></i></div>
+      <h2>Justo Daract Market</h2>
+      <p>El marketplace de Justo Daract para la comunidad y sus visitantes.</p>
+      <span class="card-link">Próximamente</span>
+    </a>
+    <!-- Tarjeta Renca Market -->
+    <a href="#" class="market-card renca" target="_blank" rel="noopener noreferrer">
+      <div class="card-logo" style="background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);"><i class="fas fa-store"></i></div>
+      <h2>Renca Market</h2>
+      <p>Descubre los productos y servicios de Renca en un solo lugar.</p>
+      <span class="card-link">Próximamente</span>
+    </a>
+    <!-- Tarjeta San Pablo Market -->
+    <a href="#" class="market-card sanpablo" target="_blank" rel="noopener noreferrer">
+      <div class="card-logo" style="background: linear-gradient(135deg, #f87171 0%, #fbbf24 100%);"><i class="fas fa-store"></i></div>
+      <h2>San Pablo Market</h2>
+      <p>Marketplace para San Pablo y su comunidad.</p>
+      <span class="card-link">Próximamente</span>
+    </a>
+    <!-- Tarjeta Pueblos de la Costa (Los Molles, Carpintería, etc.) -->
+    <a href="#" class="market-card costa" target="_blank" rel="noopener noreferrer">
+      <div class="card-logo" style="background: linear-gradient(135deg, #10b981 0%, #6366f1 100%);"><i class="fas fa-store"></i></div>
+      <h2>Pueblos de la Costa</h2>
+      <p>Incluye Los Molles, Carpintería, Cortaderas, Villa Larca, Papagayos y más.</p>
+      <span class="card-
+  
+  </div>
+  <footer>
+    &copy; 2025 San Luis Marketplaces. Fomentando el comercio local en toda la provincia.
+  </footer>
+</body>
+</html>
